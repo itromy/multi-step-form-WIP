@@ -1,0 +1,54 @@
+.form {
+    position: relative;
+}
+
+.sidebar,
+.content {
+    padding: 20px;
+}
+
+.sidebar {
+    background: url('../assets/images/bg-sidebar-mobile.svg');
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    left: -20px;
+    box-sizing: content-box;
+    top: -20px;
+    min-height: 170px;
+}
+
+.content {
+    background: white;
+    position: absolute;
+    z-index: 10;
+    top: 100px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px; 
+}
+
+@media screen and (min-width: 768px) {
+    .form,
+    .content, 
+    .sidebar {
+        position: static;
+    }
+
+    .form {
+        background: white;
+        padding: 15px;
+        border-radius: 10px; 
+        max-width: 850px;
+        width: 100%;
+        display: flex;
+    }
+
+    .sidebar {
+        max-width: 28%;
+        border-radius: 10px;
+        background: url('../assets/images/bg-sidebar-desktop.svg');
+        background-position: bottom right;
+    }
+
+}
