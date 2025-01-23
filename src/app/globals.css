@@ -1,3 +1,5 @@
+@import '@/assets/css/fonts.css';
+
 :root {
   --background: #f0f5fe;
   --foreground: #fff;
@@ -17,6 +19,7 @@
 html, body {
   height: 100%; /* Nötig, damit der Body den gesamten Viewport abdeckt */
   margin: 0;    /* Entfernt Standard-Margin */
+  font-family: 'Ubuntu';
 }
 
 body {
