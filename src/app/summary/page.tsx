@@ -1,9 +1,11 @@
+import Container from "@/components/Container";
+
 export default function SummaryPage() {
   return (
-    <div>
-      <main>
-        Summary
-      </main>
-    </div>
+    <>
+      <Container>
+        <h1>Summary</h1>
+      </Container>
+    </>
   );
 }

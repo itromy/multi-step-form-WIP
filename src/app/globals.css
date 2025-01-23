@@ -1,8 +1,38 @@
 :root {
   --background: #f0f5fe;
   --foreground: #fff;
+  /* breakpoints */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Nötig, damit der Body den gesamten Viewport abdeckt */
+  margin: 0;    /* Entfernt Standard-Margin */
 }
 
 body {
   background: var(--background);
+}
+
+main {
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 }
