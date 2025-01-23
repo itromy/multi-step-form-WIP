@@ -12,7 +12,7 @@ export type Step = {
 export default function Stepper({steps, active}: StepperProps) {
     function renderStep(step: Step, index: number) {
         return (
-            <li className={styles.step}>
+            <li key={'stepper-' + index} className={styles.step}>
                 <span className={`${styles.index} ${(index + 1) === active ? styles.activeIndex:  ''}`}>{index + 1}</span>
                 <span className={styles.sublineLabelWrapper}>
                     <span className={styles.stepSubline}>Step {index + 1}</span>
