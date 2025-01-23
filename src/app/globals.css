@@ -39,3 +39,61 @@ main {
     height: 100%;
   }
 }
+
+/* Allgemeine Resets für alle Inputs, Textareas, Buttons */
+input, textarea, select, button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit; /* Übernimmt die Schriftart vom Elternelement */
+  color: inherit; /* Übernimmt die Textfarbe vom Elternelement */
+  background: none;
+  box-shadow: none; /* Entfernt Schatten, falls vorhanden */
+  appearance: none; /* Entfernt browser-spezifische Stile wie Pfeile bei number-inputs */
+}
+
+/* Spezifische Resets für Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+textarea {
+  resize: none; /* Deaktiviert Größenänderungen bei Textareas */
+}
+
+/* Buttons */
+button {
+  all: unset; /* Setzt alle Button-Stile zurück */
+  cursor: pointer; /* Zeigt den Pointer-Cursor an */
+}
+
+/* Select-Elemente */
+select {
+  appearance: none;
+  background: none;
+  border-radius: 0;
+}
+
+/* Checkbox und Radio */
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+  background-color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Fokus-Zustand für alle Inputs */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none; /* Entfernt den Standard-Fokus-Ring */
+  box-shadow: 0 0 0 2px #007BFF; /* Optional: Eigener Fokus-Ring */
+}
