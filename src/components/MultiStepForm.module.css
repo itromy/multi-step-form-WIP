@@ -51,4 +51,8 @@
         background-position: bottom right;
     }
 
+    .contentBody {
+        max-width: 450px;
+        margin: auto;
+    }
 }

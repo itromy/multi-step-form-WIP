@@ -15,7 +15,9 @@ export default function MultiStepForm({ children, step }: MultiStepFormProps) {
                 <Stepper active={step} steps={STEPPER_STEPS} />
             </div>
             <div className={styles.content}>
-            { children }
+                <div className={styles.contentBody}>
+                    { children }
+                </div>
             </div>
         </div>
     )
