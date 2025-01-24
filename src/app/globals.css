@@ -28,7 +28,7 @@ body {
 
 main {
   padding: 20px 20px;
-  box-sizing: border-box;
+  height: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -94,6 +94,5 @@ input:focus,
 textarea:focus,
 select:focus,
 button:focus {
-  outline: none; /* Entfernt den Standard-Fokus-Ring */
-  box-shadow: 0 0 0 2px #007BFF; /* Optional: Eigener Fokus-Ring */
+  outline: none;
 }
