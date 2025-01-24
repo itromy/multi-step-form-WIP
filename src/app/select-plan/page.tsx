@@ -22,8 +22,6 @@ export default function SelectPlanPage() {
       ...formState,
       [changedValues.name]: changedValues.value
     })
-
-    console.log(changedValues);
   }
 
   function onNext() {
