@@ -5,6 +5,7 @@ import MultiStepForm from "@/components/MultiStepForm";
 import { validateFormDataFirstStep } from "@/services/validateFormData";
 import { FormDataStep1Type, FormValidationStep1Type } from "@/types/Form";
 import { useState } from "react";
+import { useRouter } from 'next/navigation';
 
 export default function YourInfoPage() {
   const [formState, setFormState] = useState<FormDataStep1Type>({
@@ -13,6 +14,7 @@ export default function YourInfoPage() {
     phoneNumber: ''
   });
   const [errorState, setErrorState] = useState<FormValidationStep1Type>({});
+  const router = useRouter();
 
   function onChange(changedValues: {name: string, value: string}) {
     setFormState({
@@ -23,8 +25,14 @@ export default function YourInfoPage() {
   
   function nextStep() {
       const error = validateFormDataFirstStep(formState);
-      
+
       setErrorState(error);
+
+      if(!!error.name || !!error.email || !!error.phoneNumber) {
+        return;
+      }
+
+      router.push('/select-plan');
   }
 
   return (
