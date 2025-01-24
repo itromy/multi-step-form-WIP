@@ -17,6 +17,10 @@
     padding: 20px 0 0;
 }
 
+.withPrev {
+    justify-content: space-between
+}
+
 .sidebar,
 .content {
     padding: 20px;
@@ -62,6 +66,12 @@
     .content {
         margin: 0 auto 15px;
         width: calc(100% - 28%);
+    }
+
+    .buttonWrapper {
+        max-width: 450px;
+        margin: auto;
+        width: 100%;
     }
 
     .sidebar {

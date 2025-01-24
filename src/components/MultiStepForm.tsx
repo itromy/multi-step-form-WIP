@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './MultiStepForm.module.css';
 import Stepper from './Stepper';
 import STEPPER_STEPS from '@/constants/StepperSteps';
-import Button from './Button';
+import Button, { ButtonStyleType } from './Button';
 
 export type MultiStepFormProps = {
     children: React.ReactNode;
@@ -28,7 +28,7 @@ export default function MultiStepForm({ children, step, onNext, nextText, onPrev
             return;
         }
 
-        return  <Button onClick={onPrevious}>{previousText ?? 'Previous Step'}</Button>
+        return  <Button onClick={onPrevious} styleType={ButtonStyleType.Secondary}>{previousText ?? 'Previous Step'}</Button>
     }
     
     return (
@@ -42,7 +42,7 @@ export default function MultiStepForm({ children, step, onNext, nextText, onPrev
                         { children }
                     </div>
                 </div>
-                <div className={styles.buttonWrapper}>
+                <div className={`${styles.buttonWrapper} ${onPrevious ? styles.withPrev : ''}`}>
                     {renderPreviousButton()}
                     {renderNextButton()}
                 </div>
