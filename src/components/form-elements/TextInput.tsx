@@ -6,10 +6,11 @@ export type TextInputProps = {
     label: string;
     placeholder?: string;
     error?: string;
+    required?: boolean;
     onChange: ({ name, value }: { name: string; value: string }) => void; // Typ angepasst
 }
 
-export default function TextInput({ value, name, label, placeholder, error, onChange }: TextInputProps) {
+export default function TextInput({ value, name, label, placeholder, required, error, onChange }: TextInputProps) {
     function handleOnChange(event: React.ChangeEvent<HTMLInputElement>) {
         onChange({
             name: name,
@@ -42,6 +43,7 @@ export default function TextInput({ value, name, label, placeholder, error, onCh
                 name={name}
                 value={value}
                 placeholder={placeholder}
+                required={required}
             />
         );
     }
