@@ -1,0 +1,65 @@
+.component {
+    display: flex;
+}
+
+.icon {
+    display: block;
+    background: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.arcade {
+    background: url('../assets/images/icon-arcade.svg');
+    background-size: cover;
+}
+
+.advanced {
+    background: url('../assets/images/icon-advanced.svg');
+    background-size: cover;
+}
+
+.pro {
+    background: url('../assets/images/icon-pro.svg');
+    background-size: cover;
+}
+
+.text {
+    padding: 0 15px;
+    margin: 0;
+}
+
+.name {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 300;
+}
+
+.price {
+    color: #a5a5a5;
+}
+
+.note {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@media screen and (min-width:576px) {
+    .component {
+        flex-direction: column;
+    }
+
+    .icon {
+        margin: 0 auto 40px;
+    }
+
+    .text {
+        padding: 0;
+    }
+
+    .note {
+        margin-bottom: 5px;
+    }
+}
