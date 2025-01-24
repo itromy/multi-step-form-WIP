@@ -1,0 +1,16 @@
+
+
+@media screen and (min-width:576px) {
+  .option {
+    padding: 0 7px;
+    position: relative;
+    left: -7px;
+    flex: 1;
+  }
+
+  .options {
+      display: flex;
+      flex: 1;
+      width: 100%
+  }
+}
