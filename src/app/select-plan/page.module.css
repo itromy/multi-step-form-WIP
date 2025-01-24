@@ -1,6 +1,19 @@
 
 
+.toggleWrapper {
+  background: #f8f9fe;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 @media screen and (min-width:576px) {
+  .toggleWrapper {
+    margin-top: 20px;
+  }
+
   .option {
     padding: 0 7px;
     position: relative;
