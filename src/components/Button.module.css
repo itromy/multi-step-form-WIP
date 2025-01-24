@@ -10,3 +10,14 @@
 .button:focus {
     background: #0c295a;
 }
+
+.secondary {
+    background: none;
+    color: #a5a5a5;
+}
+
+.secondary:hover,
+.secondary:focus {
+    background: #f8f9fe;
+    color: #000;
+}

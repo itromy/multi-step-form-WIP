@@ -2,14 +2,20 @@ import React from "react"
 import styles from './Button.module.css'
 
 export type ButtonProps = {
-    type?: 'submit' | 'button' | 'reset',
     children: React.ReactNode;
-    onClick: (values: unknown) => void
+    onClick: (values: unknown) => void;
+    styleType?: ButtonStyleType,
+
 }
 
-export default function Button({type, children, onClick}: ButtonProps) {
+export enum ButtonStyleType {
+    Primary = 'primary',
+    Secondary = 'secondary',
+}
+
+export default function Button({children, styleType, onClick}: ButtonProps) {
     return (
-        <button className={styles.button} type={type ? type : 'button'} onClick={onClick}>
+        <button className={`${styles.button} ${styles[styleType ?? ButtonStyleType.Primary]}`} type="button" onClick={onClick}>
             {children}
         </button>
     )
