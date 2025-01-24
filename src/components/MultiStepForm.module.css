@@ -1,5 +1,20 @@
 .form {
-    position: relative;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+}
+
+.contentButtonWrapper {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.buttonWrapper {
+    justify-content: flex-end;
+    display: flex;
+    padding: 20px 0 0;
 }
 
 .sidebar,
@@ -11,41 +26,47 @@
     background: url('../assets/images/bg-sidebar-mobile.svg');
     background-size: cover;
     width: 100%;
-    position: absolute;
     left: -20px;
     box-sizing: content-box;
-    top: -20px;
     min-height: 170px;
+    position: relative;
 }
 
 .content {
     background: white;
-    position: absolute;
     z-index: 10;
-    top: 100px;
     width: 100%;
     padding: 20px;
     border-radius: 10px; 
+    position: relative;
+    margin-top: -100px;
 }
 
 @media screen and (min-width: 768px) {
+    .form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        background: #fff;
+        border-radius: 10px; 
+        max-width: 850px;
+        width: 100%;
+    }
+
     .form,
     .content, 
     .sidebar {
         position: static;
     }
 
-    .form {
-        background: white;
-        padding: 15px;
-        border-radius: 10px; 
-        max-width: 850px;
-        width: 100%;
-        display: flex;
+    .content {
+        margin-top: 0;
+        width: calc(100% - 28%);
     }
 
     .sidebar {
-        max-width: 28%;
+        width: 28%;
+        box-sizing: border-box;
         border-radius: 10px;
         background: url('../assets/images/bg-sidebar-desktop.svg');
         background-position: bottom right;
@@ -54,5 +75,9 @@
     .contentBody {
         max-width: 450px;
         margin: auto;
+    }
+
+    .buttonWrapper {
+        padding: 20px;
     }
 }

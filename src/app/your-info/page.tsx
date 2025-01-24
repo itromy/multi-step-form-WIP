@@ -23,19 +23,17 @@ export default function YourInfoPage() {
   
   function nextStep() {
       const error = validateFormDataFirstStep(formState);
+      
       setErrorState(error);
   }
 
-  
-
   return (
     <>
-      <MultiStepForm step={1}>
+      <MultiStepForm step={1} onNext={nextStep}>
         <h1>Your Personal Info</h1>
         <TextInput onChange={onChange} name="name" value={formState.name} label="Name" placeholder="g.e. Stephen king" error={errorState.name} required/> 
         <TextInput onChange={onChange} name="email" value={formState.email} label="Email Address" placeholder="g.e. Stephenking@lorem.com"  error={errorState.email} required/>
         <TextInput onChange={onChange} name="phoneNumber" value={formState.phoneNumber} label="Phone Number" placeholder="g.e. + 1 234 567 890"  error={errorState.phoneNumber} required/> 
-        <button onClick={nextStep}>Next Step</button>
       </MultiStepForm>
     </>
   );
