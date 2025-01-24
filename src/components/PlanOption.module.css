@@ -49,6 +49,7 @@
 @media screen and (min-width:576px) {
     .component {
         flex-direction: column;
+        min-height: 210px;
     }
 
     .icon {
